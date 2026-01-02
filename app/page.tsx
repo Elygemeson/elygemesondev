@@ -97,18 +97,17 @@ export default function Home() {
       >
         {/* Imagem de fundo */}
         <div className="absolute inset-0 z-0">
-          <Image
+          {/* Usando img normal para garantir compatibilidade em produção */}
+          <img
             src="/imagens/fundo/fundobanner.jfif"
             alt="Fundo do banner"
-            fill
-            className="object-cover"
-            priority
-            quality={90}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ minHeight: '100vh' }}
           />
           {/* Overlay escuro para escurecer a imagem e melhorar legibilidade */}
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-black/70 z-10"></div>
           {/* Gradiente adicional para suavizar */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-10"></div>
         </div>
 
         {/* Efeito de partículas de fundo */}
