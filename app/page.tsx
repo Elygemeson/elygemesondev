@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Toast from './components/Toast';
+import Navbar from './components/Navbar';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -99,10 +100,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#000000] text-white overflow-x-hidden">
+      {/* Navbar Moderna */}
+      <Navbar />
+      
       {/* Header/Banner Principal */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-20 sm:pt-6"
       >
         {/* Imagem de fundo */}
         <div className="absolute inset-0 z-0">
@@ -130,8 +134,8 @@ export default function Home() {
         <div className={`relative z-10 max-w-7xl mx-auto w-full ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Texto e Informações */}
-            <div className={`text-center lg:text-left ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <div className={`text-center lg:text-left ${isVisible ? 'animate-fade-in-left' : 'opacity-0'} mt-8 sm:mt-0`}>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Ely Gemeson Dev
               </h1>
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light">
@@ -823,7 +827,7 @@ export default function Home() {
                     </div>
                   </a>
                   <a
-                    href="https://wa.me/5583996244799"
+                    href="https://wa.me/558393756946"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-[#121212] rounded-lg hover:bg-[#0a0a0a] transition-colors group"
@@ -835,7 +839,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-semibold text-white">WhatsApp</p>
-                      <p className="text-sm text-gray-400">(83) 99624-4799</p>
+                      <p className="text-sm text-gray-400">(83) 9375-6946</p>
                     </div>
                   </a>
                   <div className="flex items-center gap-4">

@@ -225,6 +225,157 @@ body {
   animation-play-state: paused;
 }
 
+/* Navbar - Animações Avançadas */
+@keyframes morphExpand {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes radialExpand {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3),
+                0 0 40px rgba(0, 123, 255, 0.2),
+                0 0 60px rgba(0, 123, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.5),
+                0 0 60px rgba(0, 123, 255, 0.3),
+                0 0 90px rgba(0, 123, 255, 0.2);
+  }
+}
+
+@keyframes codeLine {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) scaleX(0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+@keyframes particleBurst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance))
+    ) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes morph3D {
+  0% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(180deg) rotateX(10deg) scale(1.05);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes slideUpMobile {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Efeito de código para o botão EGD */
+.navbar-egd-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-egd-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 123, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.navbar-egd-button:hover::before {
+  left: 100%;
+}
+
+/* Efeito de linha de código nos itens do menu */
+.navbar-item-code-effect {
+  position: relative;
+}
+
+.navbar-item-code-effect::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #007BFF, #00D4FF);
+  transition: width 0.3s ease;
+}
+
+.navbar-item-code-effect:hover::after {
+  width: 100%;
+}
+
+/* Safe area para dispositivos com notch */
+@supports (padding: max(0px)) {
+  .safe-area-bottom {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+  
+  .safe-area-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+}
+
 /* Acessibilidade - Reduzir animações se o usuário preferir */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -237,5 +388,9 @@ body {
   
   .tech-slider {
     animation: none;
+  }
+  
+  .navbar-egd-button::before {
+    display: none;
   }
 }

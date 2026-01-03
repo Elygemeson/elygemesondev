@@ -106,6 +106,34 @@ export default function CronoarPage() {
                   escalabilidade para atender desde pequenos eventos até grandes competições esportivas da empresa Cronoar.
                 </p>
               </div>
+              
+              {/* Minha Contribuição */}
+              <div className="mt-8 p-6 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-xl border border-blue-500/30">
+                <h3 className="text-xl font-bold mb-4 text-blue-400 flex items-center gap-2">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Minha Contribuição no Projeto
+                </h3>
+                <div className="space-y-3 text-gray-300">
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 font-semibold mt-1">•</span>
+                    <p>
+                      <span className="text-white font-semibold">Analista de Requisitos:</span> Atuei na análise e 
+                      levantamento de requisitos funcionais e não funcionais, compreendendo profundamente as necessidades 
+                      do negócio e traduzindo-as em especificações técnicas detalhadas.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-cyan-400 font-semibold mt-1">•</span>
+                    <p>
+                      <span className="text-white font-semibold">Desenvolvedor Front End:</span> Responsável pelo 
+                      desenvolvimento completo da interface do usuário, criando uma experiência moderna, intuitiva e 
+                      responsiva utilizando tecnologias web de ponta.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div className={`${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
