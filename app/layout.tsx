@@ -83,6 +83,10 @@ export const metadata: Metadata = {
     canonical: "https://elygemesondev.com",
   },
   category: "technology",
+  // Adicione o código de verificação do Google Search Console aqui quando obtiver
+  // verification: {
+  //   google: "SEU_CODIGO_DE_VERIFICACAO_AQUI",
+  // },
 };
 
 export default function RootLayout({
