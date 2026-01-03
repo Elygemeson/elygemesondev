@@ -1,11 +1,11 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://elygemesondev.com';
+  const baseUrl = 'https://elygemesondev.com.br';
 
   return [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,

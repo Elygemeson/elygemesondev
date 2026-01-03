@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ely Gemeson Dev | Desenvolvedor Web em João Pessoa, Recife e Mamanguape",
     description: "Desenvolvedor Web especializado em criação de Landing Pages, Sites Institucionais e Soluções SaaS. Programador em João Pessoa, Recife e Mamanguape.",
-    url: "https://elygemesondev.com",
+    url: "https://elygemesondev.com.br",
     siteName: "Ely Gemeson Dev",
     locale: "pt_BR",
     type: "website",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     images: ["/imagens/fotosdo_ElyDev/foto-Ely.jpg"],
   },
   alternates: {
-    canonical: "https://elygemesondev.com",
+    canonical: "https://elygemesondev.com.br",
   },
   category: "technology",
   // Adicione o código de verificação do Google Search Console aqui quando obtiver
@@ -100,8 +100,8 @@ export default function RootLayout({
     name: "Ely Gemeson Dev",
     jobTitle: "Desenvolvedor Web",
     description: "Desenvolvedor Web especializado em criação de Landing Pages, Sites Institucionais e Soluções SaaS. Programador em João Pessoa, Recife e Mamanguape.",
-    url: "https://elygemesondev.com",
-    image: "https://elygemesondev.com/imagens/fotosdo_ElyDev/foto-Ely.jpg",
+    url: "https://elygemesondev.com.br",
+    image: "https://elygemesondev.com.br/imagens/fotosdo_ElyDev/foto-Ely.jpg",
     sameAs: [
       "https://linkedin.com/in/elygemesondev",
       "https://github.com/elygemesondev",
@@ -184,8 +184,8 @@ export default function RootLayout({
     "@type": "ProfessionalService",
     name: "Ely Gemeson Dev - Desenvolvimento Web",
     description: "Desenvolvedor Web especializado em criação de Landing Pages, Sites Institucionais e Soluções SaaS. Atendimento em João Pessoa, Recife e Mamanguape.",
-    url: "https://elygemesondev.com",
-    image: "https://elygemesondev.com/imagens/fotosdo_ElyDev/foto-Ely.jpg",
+    url: "https://elygemesondev.com.br",
+    image: "https://elygemesondev.com.br/imagens/fotosdo_ElyDev/foto-Ely.jpg",
     address: {
       "@type": "PostalAddress",
       addressLocality: "João Pessoa",
