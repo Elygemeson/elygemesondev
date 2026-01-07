@@ -62,7 +62,7 @@ export default function CronoarPage() {
               Cronoar
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 mb-4 max-w-3xl">
-              Sistema completo para gerenciamento de competições esportivas
+              Sistema completo para gerenciamento de corridas esportivas
             </p>
             <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-6">
               Sistema moderno e intuitivo desenvolvido para a empresa Cronoar, facilitando a organização e gestão completa de competições esportivas, 
