@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 GUIA_GOOGLE_SEARCH_CONSOLE.md
+
+ENV_SETUP.md
