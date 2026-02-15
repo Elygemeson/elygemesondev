@@ -62,6 +62,8 @@ export default function Home() {
       name: 'Confinar',
       slug: 'confinar',
       description: 'Sistema SaaS completo para gestão e controle de estoque, com interface moderna e intuitiva.',
+      isPrivate: true,
+      badgeText: 'Em desenvolvimento',
       images: [
         '/imagens/imagens_confinar_saas/bannerpc.png',
         '/imagens/imagens_confinar_saas/teladashboard.png',
@@ -75,6 +77,7 @@ export default function Home() {
       name: 'Cronoar',
       slug: 'cronoar',
       description: 'Sistema desenvolvido para a empresa Cronoar, com gerenciamento de competições esportivas, inscrições e resultados.',
+      isPrivate: false,
       images: [
         '/imagens/imagens_cronoar/bannercronoar.png',
         '/imagens/imagens_cronoar/inscriçõescronoar.png',
@@ -88,6 +91,7 @@ export default function Home() {
       name: 'Gerador de Relatórios',
       slug: 'gerador-relatorios',
       description: 'Um dos grandes projetos desenvolvidos para o Estado da Paraíba. Sistema completo para geração de relatórios de desempenho com dashboard interativo.',
+      isPrivate: true,
       images: [
         '/imagens/imagens_gerador_relatorios/teladedashboard.png',
         '/imagens/imagens_gerador_relatorios/formuláriodorelatóriodotanamesa.png',
@@ -95,6 +99,33 @@ export default function Home() {
         '/imagens/imagens_gerador_relatorios/sobreoprojeto.png',
       ],
       mainImage: '/imagens/imagens_gerador_relatorios/teladedashboard.png',
+    },
+    {
+      name: 'PAA',
+      slug: 'paa',
+      description: 'Sistema desenvolvido para o Estado da Paraíba para controle do Programa PAA Leite. Registra operações de entrega e recebimento de leite, além de gestão de usuários.',
+      isPrivate: true,
+      images: [
+        '/imagens/imagens_paa/dashboard.png',
+        '/imagens/imagens_paa/cadastros.png',
+        '/imagens/imagens_paa/criaçãodeusers.png',
+      ],
+      mainImage: '/imagens/imagens_paa/dashboard.png',
+    },
+    {
+      name: 'SGA Agro',
+      slug: 'sga-agro',
+      description: 'Sistema de gerenciamento agrícola focado em perdas durante a safra e plantio. SaaS em ascensão no mercado com feedbacks positivos de especialistas.',
+      isPrivate: false,
+      link: 'https://sgaagro.com.br',
+      images: [
+        '/imagens/imagens_sgaagro/home.png',
+        '/imagens/imagens_sgaagro/dashboard.png',
+        '/imagens/imagens_sgaagro/tela_login.png',
+        '/imagens/imagens_sgaagro/telacomumcadastro.png',
+        '/imagens/imagens_sgaagro/consultas_relatorios.png',
+      ],
+      mainImage: '/imagens/imagens_sgaagro/home.png',
     },
   ];
 
@@ -620,6 +651,11 @@ export default function Home() {
                         fill
                         className="object-cover"
                       />
+                      {projeto.isPrivate && (
+                        <div className="absolute top-3 right-3 px-2 py-1 bg-amber-600/90 text-amber-100 text-xs font-semibold rounded-lg">
+                          {(projeto as { badgeText?: string }).badgeText || 'Projeto Privado'}
+                        </div>
+                      )}
                     </div>
                     <div className="p-6">
                       <h3 className="text-2xl font-bold mb-3 text-white">{projeto.name}</h3>

@@ -53,6 +53,9 @@ export default function ConfinarPage() {
           </Link>
           
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div className="inline-block px-4 py-2 bg-amber-600/20 border border-amber-500/30 rounded-full mb-4">
+              <span className="text-amber-400 text-sm font-semibold">Em desenvolvimento - Link não disponível</span>
+            </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Confinar
             </h1>

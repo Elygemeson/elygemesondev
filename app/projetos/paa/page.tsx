@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-export default function GeradorRelatoriosPage() {
+export default function PaaPage() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,24 +13,19 @@ export default function GeradorRelatoriosPage() {
 
   const imagens = [
     {
-      src: '/imagens/imagens_gerador_relatorios/teladedashboard.png',
-      alt: 'Dashboard do Gerador de Relatórios - Visão geral do sistema',
+      src: '/imagens/imagens_paa/dashboard.png',
+      alt: 'Dashboard do PAA Leite - Visão geral do sistema',
       title: 'Dashboard',
     },
     {
-      src: '/imagens/imagens_gerador_relatorios/formuláriodorelatóriodotanamesa.png',
-      alt: 'Formulário de Relatório do Tanamesa',
-      title: 'Formulário de Relatório',
+      src: '/imagens/imagens_paa/cadastros.png',
+      alt: 'Cadastros do sistema PAA',
+      title: 'Cadastros',
     },
     {
-      src: '/imagens/imagens_gerador_relatorios/relatóriodedesenpenho.png',
-      alt: 'Relatório de Desempenho',
-      title: 'Relatório de Desempenho',
-    },
-    {
-      src: '/imagens/imagens_gerador_relatorios/sobreoprojeto.png',
-      alt: 'Sobre o Projeto - Gerador de Relatórios',
-      title: 'Sobre o Projeto',
+      src: '/imagens/imagens_paa/criaçãodeusers.png',
+      alt: 'Criação de usuários por tipo no PAA',
+      title: 'Gestão de Usuários',
     },
   ];
 
@@ -38,7 +33,7 @@ export default function GeradorRelatoriosPage() {
     <div className="min-h-screen bg-[#000000] text-white">
       {/* Header com gradiente */}
       <div className="relative bg-gradient-to-br from-blue-900/30 via-cyan-900/20 to-black py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/imagens/imagens_gerador_relatorios/teladedashboard.png')] bg-contain bg-center bg-no-repeat opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/imagens/imagens_paa/dashboard.png')] bg-contain bg-center bg-no-repeat opacity-10"></div>
         <div className="absolute inset-0 bg-black/60"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto">
@@ -62,18 +57,20 @@ export default function GeradorRelatoriosPage() {
               </div>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Gerador de Relatórios
+              PAA Leite
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 mb-4 max-w-3xl">
-              Sistema completo para geração de relatórios de desempenho
+              Sistema de controle para o Programa de Aquisição de Alimentos - PAA Leite
             </p>
             <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-4">
-              Um dos grandes projetos desenvolvidos durante minha atuação no <span className="text-blue-400 font-semibold">Estado da Paraíba</span>, 
-              este sistema oferece uma solução completa e moderna para geração de relatórios de desempenho com dashboard interativo.
+              Sistema desenvolvido para o <span className="text-blue-400 font-semibold">Estado da Paraíba</span> para 
+              solucionar um problema de controle no processo do programa PAA Leite. O sistema registra todas as operações 
+              de entrega e recebimento dos leites pelas empresas parceiras e também pelos usuários finais que são as 
+              pessoas necessitadas.
             </p>
             <p className="text-base text-gray-500 max-w-3xl leading-relaxed">
-              Ferramenta desenvolvida para facilitar a análise e apresentação de dados de forma clara e profissional, 
-              com recursos avançados de visualização e exportação de relatórios.
+              Além de gerenciar todo o fluxo de operações, o sistema permite a criação de usuários de acordo com o 
+              tipo de perfil, garantindo o controle e a segurança necessários para um programa governamental.
             </p>
           </div>
         </div>
@@ -88,28 +85,28 @@ export default function GeradorRelatoriosPage() {
                 <span className="text-blue-400 text-sm font-semibold">Projeto Governamental</span>
               </div>
               <h2 className="text-4xl font-bold mb-6 text-white">
-                Um dos Grandes Projetos para o Estado da Paraíba
+                Controle Completo do Programa PAA Leite
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  O <span className="text-blue-400 font-semibold">Gerador de Relatórios</span> foi desenvolvido 
+                  O sistema <span className="text-blue-400 font-semibold">PAA Leite</span> foi desenvolvido 
                   durante minha atuação no <span className="text-blue-400 font-semibold">Estado da Paraíba</span>, 
-                  representando um dos grandes projetos que tive a oportunidade de realizar no setor público.
+                  para atender às necessidades de controle e transparência do Programa de Aquisição de Alimentos - 
+                  modalidade Leite.
                 </p>
                 <p>
-                  Este sistema foi criado para atender às necessidades de geração e análise de relatórios de desempenho, 
-                  oferecendo uma solução completa com dashboard interativo, formulários personalizados e visualizações 
-                  avançadas de dados.
+                  O sistema registra todas as operações de entrega e recebimento de leite, conectando empresas 
+                  parceiras aos usuários finais beneficiários do programa. Cada etapa do processo é documentada 
+                  e rastreada para garantir total transparência e controle.
                 </p>
                 <p>
-                  Desenvolvido com as mais modernas tecnologias web, o sistema garante performance, confiabilidade e 
-                  facilidade de uso, permitindo que os gestores públicos tenham acesso rápido e preciso às informações 
-                  necessárias para tomada de decisões estratégicas.
+                  A gestão de usuários permite a criação de perfis de acordo com o tipo de acesso necessário, 
+                  garantindo que cada ator do processo tenha as permissões adequadas para executar suas funções.
                 </p>
                 <p className="pt-4 border-t border-gray-700">
                   <span className="text-blue-400 font-semibold">Experiência no Setor Público:</span> Este projeto 
-                  demonstra minha capacidade de desenvolver soluções complexas que atendem às necessidades específicas 
-                  do setor público, com foco em eficiência, transparência e usabilidade.
+                  demonstra a capacidade de desenvolver soluções que atendem às necessidades específicas de programas 
+                  governamentais de distribuição de alimentos, com foco em rastreabilidade e gestão eficiente.
                 </p>
               </div>
               
@@ -125,17 +122,17 @@ export default function GeradorRelatoriosPage() {
                   <div className="flex items-start gap-3">
                     <span className="text-blue-400 font-semibold mt-1">•</span>
                     <p>
-                      <span className="text-white font-semibold">Analista de Requisitos:</span> Atuei na análise e 
-                      levantamento de requisitos funcionais e não funcionais, compreendendo profundamente as necessidades 
-                      do setor público e traduzindo-as em especificações técnicas detalhadas.
+                      <span className="text-white font-semibold">Desenvolvimento Full Stack:</span> Responsável pelo 
+                      desenvolvimento completo do sistema, incluindo backend, frontend e integração com os processos 
+                      do programa PAA Leite.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-cyan-400 font-semibold mt-1">•</span>
                     <p>
-                      <span className="text-white font-semibold">Desenvolvedor Full Stack:</span> Responsável pelo 
-                      desenvolvimento completo da aplicação, desde a interface do usuário até a arquitetura backend, 
-                      incluindo APIs, banco de dados e integração de sistemas, garantindo uma solução robusta e escalável.
+                      <span className="text-white font-semibold">Sistema de Gestão de Usuários:</span> Implementação 
+                      do módulo de criação e gestão de usuários por tipo, com controle de permissões adequado ao 
+                      contexto governamental.
                     </p>
                   </div>
                 </div>
@@ -146,8 +143,8 @@ export default function GeradorRelatoriosPage() {
               <div className="relative w-full rounded-2xl overflow-hidden border border-gray-800 shadow-xl bg-[#1a1a1a] flex items-center justify-center">
                 <div className="relative w-full aspect-video">
                   <Image
-                    src="/imagens/imagens_gerador_relatorios/teladedashboard.png"
-                    alt="Dashboard do Gerador de Relatórios"
+                    src="/imagens/imagens_paa/dashboard.png"
+                    alt="Dashboard do PAA Leite"
                     fill
                     className="object-contain p-4"
                   />
@@ -205,26 +202,26 @@ export default function GeradorRelatoriosPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: 'Gestão Completa de Relatórios',
-                description: 'Sistema completo para criação, gerenciamento e análise de relatórios de desempenho com dashboard interativo e visualizações avançadas.',
+                title: 'Registro de Operações',
+                description: 'Registro completo de todas as operações de entrega e recebimento de leite pelas empresas parceiras e usuários finais.',
                 icon: (
                   <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                   </svg>
                 ),
               },
               {
-                title: 'Interface Moderna',
-                description: 'Design intuitivo e responsivo, otimizado para uso em desktop e dispositivos móveis.',
+                title: 'Gestão de Usuários',
+                description: 'Criação e gerenciamento de usuários de acordo com o tipo de perfil, com permissões adequadas para cada função.',
                 icon: (
                   <svg className="w-12 h-12 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 ),
               },
               {
                 title: 'Sistema Seguro',
-                description: 'Sistema com alta segurança de dados e backup automático das informações, essencial para projetos governamentais.',
+                description: 'Plataforma desenvolvida com alta segurança para dados sensíveis de programas governamentais.',
                 icon: (
                   <svg className="w-12 h-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -241,29 +238,6 @@ export default function GeradorRelatoriosPage() {
                 <p className="text-gray-400 leading-relaxed">{feature.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Seção de Destaque - Projeto Governamental */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-cyan-900/10 to-black border-y border-blue-500/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <div className="inline-block px-6 py-3 bg-blue-600/20 border border-blue-500/30 rounded-full mb-6">
-              <span className="text-blue-400 text-lg font-semibold">Projeto para o Estado da Paraíba</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-              Experiência no Setor Público
-            </h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Este projeto representa um dos grandes trabalhos realizados durante minha atuação no 
-              <span className="text-blue-400 font-semibold"> Estado da Paraíba</span>, demonstrando minha capacidade 
-              de desenvolver soluções complexas que atendem às necessidades específicas do setor público.
-            </p>
-            <p className="text-base text-gray-400 leading-relaxed">
-              O sistema foi desenvolvido com foco em eficiência, transparência e usabilidade, características 
-              essenciais para ferramentas utilizadas na gestão pública.
-            </p>
           </div>
         </div>
       </section>
