@@ -151,18 +151,9 @@ export default function RootLayout({
       addressCountry: "BR",
     },
     areaServed: [
-      {
-        "@type": "City",
-        name: "João Pessoa",
-      },
-      {
-        "@type": "City",
-        name: "Recife",
-      },
-      {
-        "@type": "City",
-        name: "Mamanguape",
-      },
+      { "@type": "City", name: "João Pessoa" },
+      { "@type": "City", name: "Recife" },
+      { "@type": "City", name: "Mamanguape" },
     ],
     offers: {
       "@type": "Offer",
@@ -189,18 +180,9 @@ export default function RootLayout({
       addressCountry: "BR",
     },
     areaServed: [
-      {
-        "@type": "City",
-        name: "João Pessoa",
-      },
-      {
-        "@type": "City",
-        name: "Recife",
-      },
-      {
-        "@type": "City",
-        name: "Mamanguape",
-      },
+      { "@type": "City", name: "João Pessoa" },
+      { "@type": "City", name: "Recife" },
+      { "@type": "City", name: "Mamanguape" },
     ],
     serviceType: [
       "Desenvolvimento Web",
@@ -218,6 +200,22 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR" className="scroll-smooth">
+      <head>
+        {/* Share Tech Mono — fonte da seção Projetos */}
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased bg-[#000000] text-white`}
       >

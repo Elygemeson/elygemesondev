@@ -2,168 +2,108 @@
 
 :root {
   --font-sans: var(--font-inter);
+
+  /* Projetos - Variáveis (cor verde usada também em títulos da home) */
+  --proj-accent:  #00f5c4;
+  --proj-accent2: #4d6cff;
+  --proj-accent3: #ff3c6e;
+  --proj-surface: #0c1020;
+  --proj-border:  #1a2540;
+  --proj-muted:   #5a6688;
 }
+
+/* Título de seção — Share Tech Mono + destaque verde (igual à seção Projetos) */
+.section-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.section-title-accent { color: var(--proj-accent); }
 
 body {
   font-family: var(--font-inter), 'Inter', 'Roboto', sans-serif;
 }
 
-/* Animações de Fade-In */
+/* ─── Animações de Fade-In ─────────────────────────────────── */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-slide-up {
-  animation: slideUp 0.3s ease-out;
-}
+.animate-slide-up   { animation: slideUp 0.3s ease-out; }
+.animate-fade-in       { animation: fadeIn 1s ease-out forwards; }
+.animate-fade-in-up    { animation: fadeInUp 1s ease-out forwards; }
+.animate-fade-in-left  { animation: fadeInLeft 1s ease-out forwards; }
+.animate-fade-in-right { animation: fadeInRight 1s ease-out forwards; }
 
-/* Animação de Slide-In */
+/* ─── Slide-In ─────────────────────────────────────────────── */
 @keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
 }
+.animate-slide-in { animation: slideIn 1s ease-out forwards; }
 
-/* Animação de Bounce suave */
+/* ─── Bounce suave ─────────────────────────────────────────── */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
 }
 
-/* Animação de Rotação */
+/* ─── Rotate ───────────────────────────────────────────────── */
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-/* Animação de Pulse */
+/* ─── Pulse ────────────────────────────────────────────────── */
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
 }
 
-/* Animação de Slide Infinito */
+/* ─── Slide Infinito (tech slider) ────────────────────────── */
 @keyframes slideInfinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Classes de animação */
-.animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.animate-fade-in-left {
-  animation: fadeInLeft 1s ease-out forwards;
-}
-
-.animate-fade-in-right {
-  animation: fadeInRight 1s ease-out forwards;
-}
-
-.animate-slide-in {
-  animation: slideIn 1s ease-out forwards;
-}
-
-/* Transições suaves */
+/* ─── Transições ───────────────────────────────────────────── */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efeito de hover para cards */
+/* ─── Card hover (seções genéricas) ───────────────────────── */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card-hover:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 123, 255, 0.2);
 }
 
-/* Flip card effect */
-.flip-card {
-  perspective: 1000px;
-  width: 100%;
-}
+/* ─── Flip card ────────────────────────────────────────────── */
+.flip-card { perspective: 1000px; width: 100%; }
 
 .flip-card-inner {
   position: relative;
@@ -172,10 +112,7 @@ body {
   transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transform-style: preserve-3d;
 }
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
 
 .flip-card-front {
   position: relative;
@@ -184,213 +121,433 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
 .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: rotateY(180deg);
 }
 
-/* Gradiente animado */
+/* ─── Gradiente animado ────────────────────────────────────── */
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
 .gradient-animated {
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
 
-/* Carrossel infinito */
+/* ─── Tech Slider ──────────────────────────────────────────── */
 .tech-slider {
   display: flex;
   width: fit-content;
   animation: slideInfinite 30s linear infinite;
 }
+.tech-slider:hover { animation-play-state: paused; }
 
-.tech-slider:hover {
-  animation-play-state: paused;
-}
-
-/* Navbar - Animações Avançadas */
+/* ─── Navbar ───────────────────────────────────────────────── */
 @keyframes morphExpand {
-  0% {
-    transform: scale(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1) rotate(180deg);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
-    opacity: 1;
-  }
+  0%   { transform: scale(0) rotate(0deg);   opacity: 0; }
+  50%  { transform: scale(1.1) rotate(180deg); opacity: 0.8; }
+  100% { transform: scale(1) rotate(360deg);  opacity: 1; }
 }
-
 @keyframes radialExpand {
-  0% {
-    transform: translate(0, 0) scale(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(var(--x), var(--y)) scale(1);
-    opacity: 1;
-  }
+  0%   { transform: translate(0,0) scale(0); opacity: 0; }
+  50%  { opacity: 0.5; }
+  100% { transform: translate(var(--x),var(--y)) scale(1); opacity: 1; }
 }
-
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3),
-                0 0 40px rgba(0, 123, 255, 0.2),
-                0 0 60px rgba(0, 123, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0,123,255,.3),
+                0 0 40px rgba(0,123,255,.2),
+                0 0 60px rgba(0,123,255,.1);
   }
   50% {
-    box-shadow: 0 0 30px rgba(0, 123, 255, 0.5),
-                0 0 60px rgba(0, 123, 255, 0.3),
-                0 0 90px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0,123,255,.5),
+                0 0 60px rgba(0,123,255,.3),
+                0 0 90px rgba(0,123,255,.2);
   }
 }
-
 @keyframes codeLine {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px) scaleX(0);
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scaleX(1);
-  }
+  0%   { opacity: 0; transform: translateX(-20px) scaleX(0); }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1; transform: translateX(0) scaleX(1); }
 }
-
-@keyframes particleBurst {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(
-      calc(cos(var(--angle)) * var(--distance)),
-      calc(sin(var(--angle)) * var(--distance))
-    ) scale(0);
-    opacity: 0;
-  }
-}
-
-@keyframes morph3D {
-  0% {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
-  }
-  50% {
-    transform: perspective(1000px) rotateY(180deg) rotateX(10deg) scale(1.05);
-  }
-  100% {
-    transform: perspective(1000px) rotateY(360deg) rotateX(0deg) scale(1);
-  }
-}
-
 @keyframes slideUpMobile {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(30px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Efeito de código para o botão EGD */
-.navbar-egd-button {
-  position: relative;
-  overflow: hidden;
-}
-
+.navbar-egd-button { position: relative; overflow: hidden; }
 .navbar-egd-button::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 123, 255, 0.3),
-    transparent
-  );
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,123,255,.3), transparent);
   transition: left 0.5s;
 }
+.navbar-egd-button:hover::before { left: 100%; }
 
-.navbar-egd-button:hover::before {
-  left: 100%;
-}
-
-/* Efeito de linha de código nos itens do menu */
-.navbar-item-code-effect {
-  position: relative;
-}
-
+.navbar-item-code-effect { position: relative; }
 .navbar-item-code-effect::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
   background: linear-gradient(90deg, #007BFF, #00D4FF);
   transition: width 0.3s ease;
 }
+.navbar-item-code-effect:hover::after { width: 100%; }
 
-.navbar-item-code-effect:hover::after {
-  width: 100%;
-}
-
-/* Safe area para dispositivos com notch */
+/* ─── Safe area ────────────────────────────────────────────── */
 @supports (padding: max(0px)) {
-  .safe-area-bottom {
-    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
-  }
-  
-  .safe-area-top {
-    padding-top: max(1rem, env(safe-area-inset-top));
-  }
+  .safe-area-bottom { padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); }
+  .safe-area-top    { padding-top:    max(1rem,   env(safe-area-inset-top)); }
 }
 
-/* Acessibilidade - Reduzir animações se o usuário preferir */
+/* ══════════════════════════════════════════════════════════════
+   SEÇÃO PROJETOS — estilos customizados
+   ══════════════════════════════════════════════════════════════ */
+
+/* Grid de fundo tecnológico */
+.proj-bg-grid {
+  background-image:
+    linear-gradient(rgba(0,245,196,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,245,196,.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Fonte mono tech */
+.proj-mono { font-family: 'Share Tech Mono', monospace; }
+
+/* Layout do grid de cards */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+.proj-col-7 { grid-column: span 7; }
+.proj-col-5 { grid-column: span 5; }
+.proj-col-4 { grid-column: span 4; }
+
+@media (max-width: 768px) {
+  .proj-grid > * { grid-column: 1 / -1 !important; }
+}
+
+/* Glow ao hover */
+.proj-card-glow:hover {
+  box-shadow:
+    0 0 32px rgba(0,245,196,.2),
+    0 0 0 1px rgba(0,245,196,.12);
+}
+.proj-card-glow-red:hover {
+  box-shadow:
+    0 0 32px rgba(255,60,110,.18),
+    0 0 0 1px rgba(255,60,110,.1);
+}
+.proj-card-glow-blue:hover {
+  box-shadow:
+    0 0 32px rgba(77,108,255,.18),
+    0 0 0 1px rgba(77,108,255,.1);
+}
+
+/* Linha luminosa na base */
+.proj-card-line {
+  position: relative;
+}
+.proj-card-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--proj-accent), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.proj-card-line:hover::after { opacity: 1; }
+
+.proj-card-line-red::after  { background: linear-gradient(90deg, transparent, var(--proj-accent3), transparent); }
+.proj-card-line-blue::after { background: linear-gradient(90deg, transparent, var(--proj-accent2), transparent); }
+
+/* Scanlines */
+.proj-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,.08) 3px,
+    rgba(0,0,0,.08) 4px
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s;
+  z-index: 1;
+  border-radius: inherit;
+}
+.proj-card:hover::before { opacity: 1; }
+
+/* Snippet de código no canto */
+.proj-code-snippet {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity .4s, transform .4s;
+}
+.proj-card:hover .proj-code-snippet {
+  opacity: .32;
+  transform: translateY(0);
+}
+
+/* Seta ↗ rotaciona no hover */
+.proj-arrow {
+  transition: all .3s;
+}
+.proj-card:hover .proj-arrow { transform: rotate(45deg); }
+
+/* Cor da seta no hover */
+.proj-card:hover .proj-arrow-green { color: var(--proj-accent);  border-color: rgba(0,245,196,.5);  background: rgba(0,245,196,.08); }
+.proj-card:hover .proj-arrow-red   { color: var(--proj-accent3); border-color: rgba(255,60,110,.5); background: rgba(255,60,110,.08); }
+.proj-card:hover .proj-arrow-blue  { color: var(--proj-accent2); border-color: rgba(77,108,255,.5); background: rgba(77,108,255,.08); }
+
+/* BG radial interno por card */
+.proj-bg-card-1 {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(0,245,196,.14) 0%, transparent 65%),
+    radial-gradient(ellipse at 20% 80%, rgba(77,108,255,.10) 0%, transparent 55%);
+  transition: transform .6s ease, opacity .4s;
+  opacity: .55;
+}
+.proj-bg-card-2 {
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(255,60,110,.14) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(77,108,255,.10) 0%, transparent 60%);
+  transition: transform .6s ease, opacity .4s;
+  opacity: .55;
+}
+.proj-bg-card-3 {
+  background: radial-gradient(ellipse at 50% 50%, rgba(77,108,255,.16) 0%, transparent 70%);
+  transition: transform .6s ease, opacity .4s;
+  opacity: .55;
+}
+.proj-bg-card-4 {
+  background: radial-gradient(ellipse at 50% 50%, rgba(0,245,196,.14) 0%, transparent 70%);
+  transition: transform .6s ease, opacity .4s;
+  opacity: .55;
+}
+.proj-bg-card-5 {
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,60,110,.14) 0%, transparent 70%);
+  transition: transform .6s ease, opacity .4s;
+  opacity: .55;
+}
+.proj-card:hover .proj-bg-card-1,
+.proj-card:hover .proj-bg-card-2,
+.proj-card:hover .proj-bg-card-3,
+.proj-card:hover .proj-bg-card-4,
+.proj-card:hover .proj-bg-card-5 {
+  opacity: .85;
+  transform: scale(1.06);
+}
+
+/* Badge "privado" / "em dev" */
+.proj-badge-amber {
+  background: rgba(180,120,0,.85);
+  color: #fde68a;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(251,191,36,.3);
+}
+.proj-badge-live {
+  background: rgba(0,160,80,.75);
+  color: #6ee7b7;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(52,211,153,.3);
+}
+
+/* Pulse ao clicar */
+@keyframes projPulseGreen {
+  0%   { box-shadow: 0 0 0 0   rgba(0,245,196,.55); }
+  100% { box-shadow: 0 0 0 22px rgba(0,245,196,0); }
+}
+@keyframes projPulseRed {
+  0%   { box-shadow: 0 0 0 0   rgba(255,60,110,.55); }
+  100% { box-shadow: 0 0 0 22px rgba(255,60,110,0); }
+}
+@keyframes projPulseBlue {
+  0%   { box-shadow: 0 0 0 0   rgba(77,108,255,.55); }
+  100% { box-shadow: 0 0 0 22px rgba(77,108,255,0); }
+}
+.proj-pulse-green { animation: projPulseGreen .45s ease; }
+.proj-pulse-red   { animation: projPulseRed   .45s ease; }
+.proj-pulse-blue  { animation: projPulseBlue  .45s ease; }
+
+/* ══════════════════════════════════════════════════════════════
+   SEÇÃO CONTATO — visual alinhado à seção Projetos
+   ══════════════════════════════════════════════════════════════ */
+
+.contato-card {
+  background: var(--proj-surface);
+  border: 1px solid var(--proj-border);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .4s, border-color .3s;
+}
+.contato-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--proj-accent), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.contato-card:hover::after { opacity: 1; }
+.contato-card:hover {
+  box-shadow: 0 0 32px rgba(0,245,196,.12), 0 0 0 1px rgba(0,245,196,.08);
+  border-color: rgba(0,245,196,.15);
+}
+
+.contato-input {
+  background: rgba(6,8,16,.8);
+  border: 1px solid var(--proj-border);
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  transition: border-color .3s, box-shadow .3s;
+}
+.contato-input::placeholder { color: var(--proj-muted); }
+.contato-input:focus {
+  outline: none;
+  border-color: var(--proj-accent);
+  box-shadow: 0 0 0 1px rgba(0,245,196,.2);
+}
+
+.contato-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--proj-muted);
+}
+
+.contato-link-item {
+  background: rgba(6,8,16,.6);
+  border: 1px solid var(--proj-border);
+  border-radius: 2px;
+  transition: border-color .3s, box-shadow .3s, color .3s;
+}
+.contato-link-item:hover {
+  border-color: rgba(0,245,196,.35);
+  box-shadow: 0 0 20px rgba(0,245,196,.1);
+}
+.contato-link-item:hover .contato-link-accent { color: var(--proj-accent); }
+
+.contato-btn {
+  background: linear-gradient(135deg, rgba(0,245,196,.2), rgba(0,245,196,.08));
+  border: 1px solid rgba(0,245,196,.4);
+  color: var(--proj-accent);
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.1em;
+  transition: all .3s;
+}
+.contato-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(0,245,196,.3), rgba(0,245,196,.15));
+  box-shadow: 0 0 24px rgba(0,245,196,.25);
+  border-color: var(--proj-accent);
+}
+.contato-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Card do formulário — mais evidente que é um formulário */
+.contato-form-card {
+  border-left: 3px solid var(--proj-accent);
+  box-shadow: 0 0 0 1px rgba(0,245,196,.06);
+}
+.contato-form-card:hover {
+  box-shadow: 0 0 32px rgba(0,245,196,.14), 0 0 0 1px rgba(0,245,196,.12);
+}
+.contato-form-badge {
+  color: var(--proj-accent);
+  background: rgba(0,245,196,.1);
+  border: 1px solid rgba(0,245,196,.25);
+}
+
+/* Card da imagem — Sobre Mim (borda tech, linha verde no hover) */
+.sobre-img-card {
+  border: 1px solid var(--proj-border);
+  position: relative;
+  transition: border-color .3s, box-shadow .3s;
+}
+.sobre-img-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--proj-accent), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.sobre-img-card:hover {
+  border-color: rgba(0,245,196,.2);
+  box-shadow: 0 0 24px rgba(0,245,196,.1);
+}
+.sobre-img-card:hover::after { opacity: 1; }
+
+/* ══════════════════════════════════════════════════════════════
+   SEÇÃO MINHA FORMAÇÃO — flip cards no estilo tech
+   ══════════════════════════════════════════════════════════════ */
+
+.formacao-card-front {
+  background: var(--proj-surface);
+  border: 1px solid var(--proj-border);
+  position: relative;
+}
+.formacao-card-front::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--proj-accent), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.formacao-flip:hover .formacao-card-front::after { opacity: 1; }
+.formacao-flip:hover .formacao-card-front {
+  border-color: rgba(0,245,196,.15);
+  box-shadow: 0 0 24px rgba(0,245,196,.08);
+}
+
+.formacao-logo-box {
+  background: rgba(6,8,16,.8);
+  border: 1px solid var(--proj-border);
+}
+
+.formacao-card-back {
+  background: linear-gradient(160deg, rgba(0,245,196,.18) 0%, rgba(0,245,196,.06) 40%, var(--proj-surface) 100%);
+  border: 1px solid rgba(0,245,196,.3);
+  color: #fff;
+}
+
+/* ─── Acessibilidade ───────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
-  .tech-slider {
-    animation: none;
-  }
-  
-  .navbar-egd-button::before {
-    display: none;
-  }
+  .tech-slider           { animation: none; }
+  .navbar-egd-button::before { display: none; }
 }
